@@ -1,4 +1,5 @@
-## Creates a matrix object, caching the inverse mean
+## Create a matrix object, caching the inverse mean
+
 
 makeCacheMatrix <- function(x = matrix()) {
   t <- NULL
@@ -14,17 +15,16 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
-
 ##returns cached matrix inverse or calculate matrix invervse if inverse is null
 
 cacheSolve <- function(x, ...) {
-  x <- x$getinverse()
+  i <- x$getinverse()
   if(!is.null(i)){
     message("getting cached data")
-    return(x)
+    return(i)
   }
   data <- x$get()
-  x <- solve(data, ...)
-  x$setinverse(x)
-  return(x)
+  i <- solve(data, ...)
+  x$setinverse(i)
+  return(i)
 }
