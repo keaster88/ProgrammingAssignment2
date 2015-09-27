@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ## Create a matrix object, caching the inverse mean
 
+=======
+## [Put comments here that describe what your functions do]
+>>>>>>> master
 
 makeCacheMatrix <- function(x = matrix()) {
   t <- NULL
@@ -15,7 +19,10 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
+<<<<<<< HEAD
 ##returns cached matrix inverse or calculate matrix invervse if inverse is null
+=======
+>>>>>>> master
 
 cacheSolve <- function(x, ...) {
   i <- x$getinverse()
